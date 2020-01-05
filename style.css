@@ -1,0 +1,17 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+}
+
+h1, p {
+  font-family: Verdana;
+  color: #584D3D;
+}
+
+hr {
+  color: #584D3D;
+  background-color: #584D3D;
+}
