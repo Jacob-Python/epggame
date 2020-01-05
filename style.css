@@ -6,7 +6,7 @@ canvas {
   display: block;
 }
 
-h1, p {
+h1, pre, form {
   font-family: Verdana;
   color: #584D3D;
 }
