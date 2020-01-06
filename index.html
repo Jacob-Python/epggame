@@ -3,6 +3,7 @@
     <script src="p5.js"></script>
     <script src="p5.sound.min.js"></script>
     <script src="smtp.js"></script>
+    <script src="smtp.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8">
   
@@ -21,6 +22,26 @@ Click the "<strong>Check</strong>" button
 to check your work!</pre>
     <pre>Copyright &copy; Jacob Myers 2019</pre>
     <pre>This website is licensed under the <strong>Apache License</strong>.</pre>
+    <button type="button" onclick="getFeedback()">Send Feedback</button>
+    <script>
+    	function getFeedback() {
+    		var text = prompt("Enter Feedback")
+    		if (text == null) {
+    			alert("Please enter text")
+    		} else {
+				Email.send({
+				  	 SecureToken : "8f3f3aff-06d2-493b-aa98-1d135b73a48b",
+				     To : "thebun636@gmail.com", 
+				     From : "feedback@electricords.ga",
+				     Subject : "Feedback",
+				     Body : text
+				 }).then(
+				  	function data(x) {
+				    	print(x)
+				 })
+    		}
+    	}
+    </script>
     </div>
     <script src="sketch.js"></script>
   
